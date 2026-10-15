@@ -6,46 +6,32 @@
 
     <!-- react -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
     <title>Document</title>
   </head>
-
   <body>
-    <!--
-        1. React. createElement () -> React element
-        2. So sánh với document. createElement() →>
-        3. Thay đối: id, className, style, ...
-        4. Thêm: text, HTML
-        5. Tạo: 
-            <h1 title="Hello" class="heading">Hello guys!</h1>
-        6. Tạo: 
-            <ul>
-                <li>Javascript</li>
-                <Li>ReactJS</li>
-            </ul>
-        7. Tạo:
-            <div class="post-item">
-                <h2 title="Học React tại F8">Học ReactJS</h2> 
-                <p>Học ReactJS từ cơ bản tới nâng cao</p>
-            </div>
-    -->
-    <script>
-      //  5:
-      // dom element:
-      const domH1 = document.createElement("h1");
-      domH1.title = "hello";
-      domH1.className = "heading";
-      domH1.textContent = "Hello guys!";
+    <div id="root"></div>
+    <script type="text/babel">
+      const courses = [
+        { name: "html,css" },
+        {
+          name: "java",
+        },
+        {
+          name: "python",
+        },
+      ];
 
-      document.body.appendChild(domH1);
-      // React element
-
-      //  6:
-      // dom element
-      // React element
-      //  7:
-      // dom element
-      // React element
+      const ul = (
+        <ul>
+          {courses.map((course, index) => (
+            <li key={index}>{course.name}</li>
+          ))}
+        </ul>
+      );
+      ReactDOM.createRoot(document.getElementById("root")).render(ul);
     </script>
   </body>
 </html>

@@ -14,3 +14,8 @@
 
 - Là các thuộc tính của thẻ HTML, được định nghĩa trong thẻ HTML
 - Ví dụ: id, class, title, style, ...
+
+#### JSX -> JavaScript XML
+
+- là 1 cú pháp giúp viết HTML trong Javascript
+- sử dụng {} để thể hiện biến của JS

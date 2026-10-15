@@ -1,19 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- react -->
     <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
 
     <title>Document</title>
-</head>
+  </head>
 
-<body>
-    <h1>hello</h1>
-    <p>ReactJS</p>
-</body>
+  <body>
+    <!--
+        1. React. createElement () -> React element
+        2. So sánh với document. createElement() →>
+        3. Thay đối: id, className, style, ...
+        4. Thêm: text, HTML
+        5. Tạo: 
+            <h1 title="Hello" class="heading">Hello guys!</h1>
+        6. Tạo: 
+            <ul>
+                <li>Javascript</li>
+                <Li>ReactJS</li>
+            </ul>
+        7. Tạo:
+            <div class="post-item">
+                <h2 title="Học React tại F8">Học ReactJS</h2> 
+                <p>Học ReactJS từ cơ bản tới nâng cao</p>
+            </div>
+    -->
+    <script>
+      //  5:
+      // dom element:
+      const domH1 = document.createElement("h1");
+      domH1.title = "hello";
+      domH1.className = "heading";
+      domH1.textContent = "Hello guys!";
 
+      document.body.appendChild(domH1);
+      // React element
+
+      //  6:
+      // dom element
+      // React element
+      //  7:
+      // dom element
+      // React element
+    </script>
+  </body>
 </html>

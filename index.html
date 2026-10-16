@@ -15,28 +15,42 @@
     <div id="root"></div>
     <script type="text/babel">
       const courses = [
-        { name: "html,css" },
         {
-          name: "java",
+          title: "HTML, CSS",
+          price: 1000,
         },
         {
-          name: "python",
+          title: "JavaScript",
+          price: 2000,
+        },
+        {
+          title: "Python",
+          price: 3000,
         },
       ];
 
-      const ul = (
-        <React.Fragment>
-          <h1>helloooo</h1>
-          <ul>
-            {courses.map((course, index) => (
-              <li key={index}>{course.name}</li>
-            ))}
-          </ul>
-        </React.Fragment>
-      );
+      // 1. Component hiển thị từng khóa học
+      function CourseItem({ item }) {
+        return (
+          <div>
+            <p>title: {item.title}</p>
+            <p>price: {item.price}</p>
+          </div>
+        );
+      }
 
-      console.log(ul);
-      ReactDOM.createRoot(document.getElementById("root")).render(ul);
+      // 2. Component App duyệt danh sách
+      function App() {
+        return (
+          <div id="wrapper">
+            {courses.map((course, index) => (
+              <CourseItem key={index} item={course} />
+            ))}
+          </div>
+        );
+      }
+
+      ReactDOM.createRoot(document.getElementById("root")).render(<App />);
     </script>
   </body>
 </html>

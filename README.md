@@ -19,3 +19,13 @@
 
 - là 1 cú pháp giúp viết HTML trong Javascript
 - sử dụng {} để thể hiện biến của JS
+
+#### <React.Fragment>
+
+- nếu để các thẻ khác nhau tại cùng 1 JSX thì sẽ bị lỗi
+- dùng để gộp các loại thẻ khác nhau tại cùng 1 JSX cha (thay vì dùng thẻ div)
+
+#### Component
+
+- tương tự như một hàm trong java
+- dùng đễ viết code rõ ràng và tái sử dụng code

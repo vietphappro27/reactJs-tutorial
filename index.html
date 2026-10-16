@@ -25,12 +25,17 @@
       ];
 
       const ul = (
-        <ul>
-          {courses.map((course, index) => (
-            <li key={index}>{course.name}</li>
-          ))}
-        </ul>
+        <React.Fragment>
+          <h1>helloooo</h1>
+          <ul>
+            {courses.map((course, index) => (
+              <li key={index}>{course.name}</li>
+            ))}
+          </ul>
+        </React.Fragment>
       );
+
+      console.log(ul);
       ReactDOM.createRoot(document.getElementById("root")).render(ul);
     </script>
   </body>
